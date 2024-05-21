@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width", initial-scale=1.0>
+    <title>Weather App - Nikita</title>
+    <link rel="stylesheet" href="place.css">
+</head>
+<body>
+
+<div class="card">
+    <div class="search">
+        <input type="text" placeholder="enter city name" spellcheck="false">
+        <button><img src="https://cdn-icons-png.flaticon.com/512/54/54481.png"></button>
+    </div>
+    <div class="error">
+        <p>Invalid city name</p>
+    </div>
+    <div class="weather">
+        <img src="C:\Users\ADMIN\AppData\Local\Temp\Temp07717f8c-46f5-45fe-b52a-4e8e7e9c4e88_weather-app-img.zip\images\rain.png" class="weather-icon">
+        <h1 class="temp">22°c</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+            <div class="col">
+                <img src="C:\Users\ADMIN\AppData\Local\Temp\Tempc59484a4-5377-46c8-9cfc-584b65a39186_weather-app-img.zip\images\humidity.png">
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="C:\Users\ADMIN\AppData\Local\Temp\Temp4ebea71c-1ea4-4fd8-affd-b01353bbf75d_weather-app-img.zip\images\wind.png">
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+const apiKey = "07fdf06837650a3d03ff5895b206dfbe";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+
+const searchBox = document.querySelector(".search input");
+const searchBtn = document.querySelector(".search button");
+const weatherIcon = document.querySelector(".weather-icon");
+
+
+async function checkWeather(city){
+    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+
+    if(response.status == 404){
+        document.querySelector(".error").style.display = "block";
+        document.querySelector(".weather").style.display = "none";
+    }else{
+
+        var data = await response.json();
+    
+    //console.log(data);
+    
+    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".temp").innerHTML = Math.round(data.main.temp)  + "°c";
+    document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+    document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
+
+    if(data.weather[0].main == "Clouds"){
+        weatherIcon.src = "https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather03-512.png";
+    }
+    else if(data.weather[0].main == "Clear"){
+        weatherIcon.src = "https://s3-alpha.figma.com/hub/file/2803345406/df2a8280-b65b-49da-b706-bed599bf2e0b-cover.png";
+    }
+    else if(data.weather[0].main == "Rain"){
+        weatherIcon.src = "https://previews.123rf.com/images/carbo82/carbo821206/carbo82120600075/14181786-icon-rainy-weather.jpg";
+    }
+    else if(data.weather[0].main == "Drizzle"){
+        weatherIcon.src = "https://cdn3d.iconscout.com/3d/premium/thumb/drizzle-weather-7096832-5753008.png";
+    }
+    else if(data.weather[0].main == "Mist"){
+        weatherIcon.src = "https://icon-library.com/images/weather-app-icon/weather-app-icon-2.jpg";
+    }
+
+    document.querySelector(".weather").style.display = "block";
+    document.querySelector(".error").style.display = "none";
+
+    }
+
+    
+}
+
+searchBtn.addEventListener("click", ()=>{
+    checkWeather(searchBox.value);
+
+})
+</script>
+
+
+</body>
+</html>
