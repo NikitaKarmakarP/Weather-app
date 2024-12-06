@@ -48,8 +48,8 @@ Contributions are welcome! Feel free to fork the repository and submit a pull re
 - Open a pull request
 
 # 📧 Contact
-# Developed by Nikita Karmakar❤️💖
-# Feel free to reach out: nikitakarmakar831@gmail.com
+**Developed by Nikita Karmakar❤️💖**
+**Feel free to reach out: nikitakarmakar831@gmail.com**
 
 # 📜 License
 This project is licensed under the MIT License.
