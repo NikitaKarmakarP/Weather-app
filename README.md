@@ -35,6 +35,7 @@ Open index.html in any web browser.
 Enjoy the Weather Updates!
 
 📂 Project Structure
+
 ![image](https://github.com/user-attachments/assets/e6823614-cc56-43c3-9210-9370b7ac9960)
 
 # 🌟 Contributing
