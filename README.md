@@ -15,8 +15,8 @@ Welcome to the Weather App, a sleek and intuitive application that provides real
 ![image](https://github.com/user-attachments/assets/1723a96f-bdb1-48ab-b540-81d3288b1288)
 
 # 🌐 Tech Stack:
-- **HTML5**: Structure and layout of the app.
-- **CSS3**: Styling for a modern and visually appealing interface.
+- **HTML**: Structure and layout of the app.
+- **CSS**: Styling for a modern and visually appealing interface.
 - **JavaScript**: Functionality to fetch real-time weather data using APIs.
 
 # 🔍 How It Works:
@@ -37,12 +37,7 @@ Enjoy the Weather Updates!
 📂 Project Structure
 bash
 Copy code
-Weather-App/
-│
-├── index.html      # Main HTML file
-├── place.css       # CSS for styling
-├── icons/          # Weather icons (clear.png, clouds.png, etc.)
-└── README.md       # Project documentation
+![image](https://github.com/user-attachments/assets/e6823614-cc56-43c3-9210-9370b7ac9960)
 
 # 🌟 Contributing
 Contributions are welcome! Feel free to fork the repository and submit a pull request.
