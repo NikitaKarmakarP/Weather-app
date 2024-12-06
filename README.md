@@ -1,5 +1,6 @@
 # 🌤️ Weather App
 **🚀 Your Personal Weather Companion!**
+
 **🌸❤️ Code, Love & Weather - The Perfect Blend! ❤️🌸**
 
 Welcome to the Weather App, a sleek and intuitive application that provides real-time weather updates for any location you desire. Whether you're planning your next adventure or just want to stay ahead of the weather, this app has got you covered!
